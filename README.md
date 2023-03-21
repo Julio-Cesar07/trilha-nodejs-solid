@@ -1,11 +1,22 @@
 # Setup
 
+Instalar dependencias
 ``` sh
     npm i
 ```
-
+Subir o docker compose desta aplicação
 ``` sh
    docker compose up -d 
+```
+
+Rodar as migrations do prisma
+``` sh
+    npm run prisma
+```
+
+Iniciar aplicação
+``` sh
+    npm run dev
 ```
 
 # App
