@@ -1,3 +1,5 @@
+import { ResourceNotFoundError } from '@/use-cases/errors/resource-not-found-error';
+import { numberPagesPagination } from '@/utils/number-pages-pagination';
 import { Prisma, CheckIn } from '@prisma/client';
 import dayjs from 'dayjs';
 import { randomUUID } from 'node:crypto';
@@ -38,10 +40,31 @@ export class InMemoryCheckInsRepository implements CheckInsRepository{
 	async findAllByUserId(userId: string, page: number): Promise<CheckIn[]> {
 		return this.items
 			.filter(item => item.user_id === userId)
-			.slice((page - 1) * 20, (page * 20));
+			.slice((page - 1) * numberPagesPagination, (page * numberPagesPagination));
+	}
+
+	async findById(checkInId: string): Promise<CheckIn | null> {
+		const checkIn = this.items.find(item => item.id === checkInId);
+		
+		if(!checkIn)
+			return null;
+
+		return checkIn;
 	}
 
 	async countByUserId(userId: string): Promise<number> {
 		return this.items.filter(item => item.user_id === userId).length;
+	}
+
+	async save(checkIn: CheckIn): Promise<CheckIn> {
+		const checkInIndex = this.items.findIndex(item => item.id === checkIn.id);
+
+		if (checkInIndex == -1){
+			throw new ResourceNotFoundError;
+		}
+
+		this.items[checkInIndex] = checkIn;
+
+		return checkIn;
 	}
 }
