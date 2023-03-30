@@ -19,6 +19,8 @@ Iniciar aplicação
     npm run dev
 ```
 
+PS... Caso for rodar os test e2e, rode npm run test:e2e antes, para criar o ambiente dos banco de dados e linkar eles na aplicação
+
 # App
 
 GymPass style app.
