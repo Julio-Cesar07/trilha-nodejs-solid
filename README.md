@@ -19,7 +19,7 @@ Iniciar aplicação
     npm run dev
 ```
 
-PS... Caso for rodar os test e2e, rode npm run test:e2e antes, para criar o ambiente dos banco de dados e linkar eles na aplicação
+PS... Caso for rodar os test e2e, rode npm run test:e2e antes, para criar o ambiente dos banco de dados e linkar os environments no npm
 
 # App
 
