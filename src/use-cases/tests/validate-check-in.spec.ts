@@ -3,15 +3,15 @@ import { maximunCheckInValidationTime } from '@/utils/maximun-check-in-validatio
 import { beforeEach, afterEach, describe, it, expect, vi } from 'vitest';
 import { LateCheckInValidationError } from '../errors/late-check-in-validation-error';
 import { ResourceNotFoundError } from '../errors/resource-not-found-error';
-import { CheckInValidateUseCase } from '../validate-check-in';
+import { ValidateCheckInUseCase } from '../validate-check-in';
 
 let checkInsRepository: InMemoryCheckInsRepository;
-let sut: CheckInValidateUseCase;
+let sut: ValidateCheckInUseCase;
 
 describe('Check-in Validate Use Case', () => {
 	beforeEach(() => {
 		checkInsRepository = new InMemoryCheckInsRepository();
-		sut = new CheckInValidateUseCase(checkInsRepository);
+		sut = new ValidateCheckInUseCase(checkInsRepository);
 
 		vi.useFakeTimers();
 	});
