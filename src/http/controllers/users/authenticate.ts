@@ -9,8 +9,6 @@ export async function authenticate(request: FastifyRequest, reply: FastifyReply)
 		password: z.string()
 	});
 
-	console.log(request.body);
-
 	const { email, password } = authenticateBodySchema.parse(request.body);
 
 	try {
