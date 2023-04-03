@@ -69,6 +69,6 @@ GymPass style app.
             -----------> UseCase -
 
 Para criar uma nova funcionalidade, crie de baixo para cima.
-ex: cria o caso de uso, se necessário crie o repositore, faça os testes unitários e crie o controller.
+ex: cria o caso de uso, se necessário crie o repositore, faça os testes unitários e crie o controller. Utilizando inversão de dependência.
 
 ps: repositore se refere a uma interface com as funcionalidade do banco de dados, onde um orm pode implementa-la.
