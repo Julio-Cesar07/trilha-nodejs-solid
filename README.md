@@ -1,5 +1,7 @@
 # Setup
 
+Possua o Docker instalado, ele é essencial. Caso não tenha, será necessário ter o NodeJs e Postgres instalado na máquina. 
+
 Crie um .env seguindo os padrões do .env.example
 
 Instalar dependencias
