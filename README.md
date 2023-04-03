@@ -25,7 +25,7 @@ Iniciar aplicação
 
 PS... Caso for rodar os test e2e, rode ```npm run test:e2e``` para criar o ambiente dos banco de dados e linkar os environments no npm
 
-PS2... Caso não tenha o NodeJs instalado, o docker-compose.yml possui a imagem do node comentado, então caso necessário, remove o comentário, altere o .env como explicado no arquivo de exemplo e execute as imagens do node e postgres com ```docker compose up -d``` (será necessário ter o docker instalado). Para escrever um comando diferente na aplicação dentro do docker, execute no cmd na pasta raiz 
+PS2... Caso não tenha o NodeJs instalado, o docker-compose.yml possui a imagem do node comentado, então caso necessário, remove o comentário, altere o .env como explicado no arquivo de exemplo e execute as imagens do node e postgres com ```docker compose up -d``` (será necessário ter o docker instalado e aguarde um tempinho até ter rodado as migrates). Para escrever um comando diferente na aplicação dentro do docker, execute no cmd na pasta raiz 
     ```docker container exec nodejs sh -c '{comando_desejado}'```
 
 # App
