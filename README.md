@@ -8,7 +8,7 @@ Instalar dependencias
 ``` sh
     npm i
 ```
-Subir o docker compose desta aplicação
+Caso tenha o docker instalado, crie a imagem do postgres
 ``` sh
    docker compose up -d 
 ```
