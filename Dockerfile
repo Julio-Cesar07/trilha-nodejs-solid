@@ -5,7 +5,7 @@ WORKDIR /usr/app
 COPY package.json ./
 COPY run_docker.sh ./
 
-# RUN npm i
+RUN npm i
 
 COPY . .
 
